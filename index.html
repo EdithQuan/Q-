@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老鼠吃芝士游戏</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #leaderboardContainer {
+            width: 250px;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        #leaderboard {
+            width: 100%;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #leaderboard h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        #leaderboardList {
+            padding-left: 20px;
+            margin: 0;
+        }
+        #leaderboardList li {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+        #gameContainer {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid black;
+            display: block;
+        }
+        #gameInfo {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="leaderboardContainer">
+        <div id="leaderboard">
+            <h2>排行榜</h2>
+            <ol id="leaderboardList"></ol>
+        </div>
+    </div>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="gameInfo">时间: <span id="timeSpan">0</span>秒 | 得分: <span id="scoreSpan">0</span></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
